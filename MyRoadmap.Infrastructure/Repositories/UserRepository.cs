@@ -4,40 +4,37 @@ namespace MyRoadmap.Infrastructure.Repositories
 {
     public class UserRepository
     {
-        public void Insert(User user)
+        private readonly MyRoadmapContext _context;
+        public UserRepository(MyRoadmapContext context)
         {
-            using var context = new MyRoadmapContext();
-
-            context.Add(user);
-            context.SaveChanges();
+            _context = context;
         }
 
-        public User Get(long id)
+        public async Task Insert(User user)
         {
-            using var context = new MyRoadmapContext();
-            var user = context.Users
-                .OrderBy(b => b.Id)
-                .First();
+            await _context.Users.AddAsync(user);
+            await _context.SaveChangesAsync();
+        }
 
+        public async Task<User> Get(long id)
+        {
+            var user = await _context.Users.FindAsync(id);
+                
             return user;
         }
 
-        public void Update(User user)
+        public async Task Update(User user)
         {
-            using var context = new MyRoadmapContext();
+            _context.Users.Update(user);
             
-            context.Users.Update(user);
-
-            context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
 
-        public void Delete(User user)
+        public async Task Delete(User user)
         {
-            using var context = new MyRoadmapContext();
+            _context.Users.Remove(user);
 
-            context.Users.Remove(user);
-
-            context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
     }
 }
