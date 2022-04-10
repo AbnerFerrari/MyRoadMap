@@ -20,8 +20,12 @@ namespace MyRoadmap.Infrastructure
             };
 
             var optionsBuilder = new DbContextOptionsBuilder<MyRoadmapContext>();
-            
-            return new MyRoadmapContext(optionsBuilder.Options, appSettings);
+
+            optionsBuilder
+                .UseNpgsql(appSettings.ConnectionString)
+                .UseSnakeCaseNamingConvention();
+
+            return new MyRoadmapContext(optionsBuilder.Options);
         }
     }
 }
