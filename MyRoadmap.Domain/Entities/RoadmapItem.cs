@@ -6,6 +6,6 @@ namespace MyRoadmap.Domain.Entities
     {
         public string Description { get; set; }
 
-        public Roadmap LastRequiredItem { get; set; }
+        public RoadmapItem LastRequiredItem { get; set; }
     }
 }
