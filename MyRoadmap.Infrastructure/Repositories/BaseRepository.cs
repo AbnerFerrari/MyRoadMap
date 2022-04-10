@@ -1,6 +1,7 @@
 ﻿using MyRoadmap.Domain.Entities.Base;
 using MyRoadmap.Domain.Interfaces;
 using MyRoadmap.Infrastructure.Interfaces;
+using System.Linq.Expressions;
 
 namespace MyRoadmap.Infrastructure.Repositories
 {
@@ -22,8 +23,15 @@ namespace MyRoadmap.Infrastructure.Repositories
         public async Task<T> Get(long id)
         {
             var entity = await _context.FindAsync<T>(id);
-
+            
             return entity;
+        }
+
+        public List<T> GetAll(Expression<Func<T, bool>> @filter)
+        {
+            var entities = _context.Set<T>().Where(filter);
+            
+            return entities.ToList();
         }
 
         public async Task Insert(T entity)
