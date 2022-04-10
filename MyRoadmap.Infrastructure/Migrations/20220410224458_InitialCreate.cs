@@ -43,17 +43,23 @@ namespace MyRoadmap.Infrastructure.Migrations
                     id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     description = table.Column<string>(type: "text", nullable: false),
-                    last_required_item_id = table.Column<long>(type: "bigint", nullable: false)
+                    last_required_item_id = table.Column<long>(type: "bigint", nullable: false),
+                    roadmap_id = table.Column<long>(type: "bigint", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("pk_roadmap_items", x => x.id);
                     table.ForeignKey(
-                        name: "fk_roadmap_items_roadmaps_last_required_item_id",
+                        name: "fk_roadmap_items_roadmap_items_last_required_item_id",
                         column: x => x.last_required_item_id,
-                        principalTable: "roadmaps",
+                        principalTable: "roadmap_items",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "fk_roadmap_items_roadmaps_roadmap_id",
+                        column: x => x.roadmap_id,
+                        principalTable: "roadmaps",
+                        principalColumn: "id");
                 });
 
             migrationBuilder.CreateTable(
@@ -87,6 +93,11 @@ namespace MyRoadmap.Infrastructure.Migrations
                 name: "ix_roadmap_items_last_required_item_id",
                 table: "roadmap_items",
                 column: "last_required_item_id");
+
+            migrationBuilder.CreateIndex(
+                name: "ix_roadmap_items_roadmap_id",
+                table: "roadmap_items",
+                column: "roadmap_id");
 
             migrationBuilder.CreateIndex(
                 name: "ix_users_roadmap_id",

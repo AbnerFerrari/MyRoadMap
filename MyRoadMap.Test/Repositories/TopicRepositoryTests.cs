@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace MyRoadMap.Test.Repositories
 {
     [TestClass]
-    public class TopicRepositoryTest
+    public class TopicRepositoryTests
     {
         private static IRepository<Topic> _repository;
 
