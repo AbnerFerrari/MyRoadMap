@@ -1,13 +1,9 @@
 ﻿using MyRoadmap.Domain.Entities.Base;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using MyRoadmap.Domain.Interfaces;
 
 namespace MyRoadmap.Domain.Entities
 {
-    public class Roadmap : EntityBase
+    public class Roadmap : EntityBase, IAggregateRoot
     {
         public IList<RoadmapItem> RoadmapItem { get; set; }
 
