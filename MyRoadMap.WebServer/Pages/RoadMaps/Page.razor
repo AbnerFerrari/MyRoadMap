@@ -1,0 +1,14 @@
+﻿@page "/RoadMaps"
+@page "/RoadMaps/Edit/{Id:long}"
+
+<div class="d-flex flex-column w-100">
+    @if (Id == default)
+    {
+        <List/>
+    }
+    else
+    {
+        <Edit Id="Id" />
+    }
+
+</div>

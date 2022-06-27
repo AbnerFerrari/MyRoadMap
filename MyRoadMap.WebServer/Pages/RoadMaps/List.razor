@@ -1,0 +1,17 @@
+﻿<div class="col-12 text-center">
+    <h3>Road Maps</h3>
+</div>
+    
+<div class="col-8 mx-auto">
+    <ul>
+    @if (RoadMaps != null)
+    {
+        foreach (var roadMap in RoadMaps)
+        {
+            <li class="rounded-2">
+                <a href="RoadMaps/Edit/@roadMap.Id" class="d-flex p-2"><span>@roadMap.Description</span></a>
+            </li>
+        }    
+    }
+    </ul>
+</div>

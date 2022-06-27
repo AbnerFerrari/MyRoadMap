@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyRoadMap.Domain.Model", "MyRoadMap.Domain.Model\MyRoadMap.Domain.Model.csproj", "{23060289-63C3-40E3-B053-B9384FDB6AB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyRoadMap.Infrastructure", "MyRoadMap.Infrastructure\MyRoadMap.Infrastructure.csproj", "{2547BC99-BFA0-400B-A409-BDD03C07EB9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyRoadMap.Domain", "MyRoadMap.Domain\MyRoadMap.Domain.csproj", "{EB865CFD-1FD8-4429-9F27-ADBBB00DAE0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyRoadMap.Test", "MyRoadMap.Test\MyRoadMap.Test.csproj", "{6994E6B4-F27C-46AC-828E-FB25557C39E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyRoadMap.Api", "MyRoadMap.Api\MyRoadMap.Api.csproj", "{5F46EADE-1679-421D-BAF6-DA6A9AA475C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyRoadMap.WebServer", "MyRoadMap.WebServer\MyRoadMap.WebServer.csproj", "{C8C3AB98-C180-434D-A58D-1A2215B7546E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23060289-63C3-40E3-B053-B9384FDB6AB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23060289-63C3-40E3-B053-B9384FDB6AB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23060289-63C3-40E3-B053-B9384FDB6AB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23060289-63C3-40E3-B053-B9384FDB6AB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2547BC99-BFA0-400B-A409-BDD03C07EB9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2547BC99-BFA0-400B-A409-BDD03C07EB9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2547BC99-BFA0-400B-A409-BDD03C07EB9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2547BC99-BFA0-400B-A409-BDD03C07EB9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB865CFD-1FD8-4429-9F27-ADBBB00DAE0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB865CFD-1FD8-4429-9F27-ADBBB00DAE0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB865CFD-1FD8-4429-9F27-ADBBB00DAE0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB865CFD-1FD8-4429-9F27-ADBBB00DAE0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6994E6B4-F27C-46AC-828E-FB25557C39E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6994E6B4-F27C-46AC-828E-FB25557C39E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6994E6B4-F27C-46AC-828E-FB25557C39E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6994E6B4-F27C-46AC-828E-FB25557C39E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F46EADE-1679-421D-BAF6-DA6A9AA475C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F46EADE-1679-421D-BAF6-DA6A9AA475C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F46EADE-1679-421D-BAF6-DA6A9AA475C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F46EADE-1679-421D-BAF6-DA6A9AA475C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8C3AB98-C180-434D-A58D-1A2215B7546E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8C3AB98-C180-434D-A58D-1A2215B7546E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8C3AB98-C180-434D-A58D-1A2215B7546E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8C3AB98-C180-434D-A58D-1A2215B7546E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {64F421AC-E165-432F-AEF7-745FC619A8D4}
+	EndGlobalSection
+EndGlobal
